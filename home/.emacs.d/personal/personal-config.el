@@ -16,7 +16,7 @@
 (setq whitespace-line-column 140)
 
 ;; set theme to monokai
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/themes/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/monokai-emacs")
 (load-theme 'monokai t)
 
 ;; swap prelude keybindings to match the rest of the system

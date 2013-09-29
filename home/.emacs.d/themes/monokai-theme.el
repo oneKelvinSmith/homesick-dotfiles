@@ -1,1 +1,0 @@
-/Users/kelvin/.homesick/repos/oneKelvinSmith/dotfiles/home/.emacs.d/themes/monokai-theme.el

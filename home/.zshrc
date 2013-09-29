@@ -30,9 +30,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# virtualenv wrapper commands
-source /usr/local/bin/virtualenvwrapper.sh
-
 # git and hub completions
 fpath=(~/.zsh/completion $fpath)
 

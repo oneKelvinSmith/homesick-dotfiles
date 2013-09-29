@@ -25,8 +25,7 @@ alias mux="tmuxinator"
 
 plugins=(
     git ruby rbenv bundler gem rake rails rails3 rails4 heroku
-    fabric python pip django vagrant virtualenv virtualenvwrapper
-    thor tmux tmuxinator zsh-syntax-highlighting emacs
+    vagrant thor tmux tmuxinator zsh-syntax-highlighting emacs
 )
 
 source $ZSH/oh-my-zsh.sh

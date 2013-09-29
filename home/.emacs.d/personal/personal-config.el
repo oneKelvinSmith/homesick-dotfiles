@@ -4,11 +4,16 @@
 
 ;;; Code:
 
+(defun in-terminal ()
+  "Return true if in a terminal."
+  (not (display-graphic-p)))
+
 ;; disable scroll bars
 (scroll-bar-mode -1)
 
 ;; set cursor to bar
 (setq cursor-type 'bar)
+(setq whitespace-line-column 140)
 
 ;; set theme to monokai
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/monokai-emacs")
@@ -32,10 +37,6 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-(defun in-terminal ()
-  "Return true if in a terminal."
-  (not (display-graphic-p)))
 
 (provide 'personal-config)
 ;;; personal-config.el ends here

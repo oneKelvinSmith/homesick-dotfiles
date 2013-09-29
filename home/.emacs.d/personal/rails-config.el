@@ -27,6 +27,12 @@ This function cause closing parenthesis to use the K&R indent style in 'ruby-mod
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
 
+;; enable inf-ruby with pry irb
+(add-to-list 'inf-ruby-implementations '("pry" . "pry -f"))
+(setq inf-ruby-default-implementation "pry")
+(setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
+(setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
+
 ;; enable ido for rinari
 (require 'ido)
 (ido-mode t)

@@ -8,6 +8,8 @@
   "Return true if in a terminal."
   (not (display-graphic-p)))
 
+(if (in-terminal) "fantastic" "madness")
+
 ;; disable scroll bars
 (scroll-bar-mode -1)
 

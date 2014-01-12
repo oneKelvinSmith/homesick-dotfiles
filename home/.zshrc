@@ -24,8 +24,8 @@ alias git="hub"
 alias mux="tmuxinator"
 
 plugins=(
-    git ruby rbenv bundler gem rake rails rails3 rails4 heroku
-    vagrant thor tmux tmuxinator zsh-syntax-highlighting emacs
+    git ruby rbenv bundler gem rake rails heroku vagrant
+    thor tmux tmuxinator zsh-syntax-highlighting emacs
 )
 
 source $ZSH/oh-my-zsh.sh

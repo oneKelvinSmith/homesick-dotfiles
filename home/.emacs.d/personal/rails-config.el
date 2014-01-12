@@ -9,6 +9,12 @@
 ;; superfluous (possibly) requirement of ruby mode
 (require 'ruby-mode)
 
+;; enhanced ruby mode
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
+
 ;; use 1TBS for ruby code
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   "1TBS Closing Parenthesis.
@@ -27,27 +33,18 @@ This function cause closing parenthesis to use the K&R indent style in 'ruby-mod
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
 
-;; enable inf-ruby with pry irb
-(add-to-list 'inf-ruby-implementations '("pry" . "pry -f"))
-(setq inf-ruby-default-implementation "pry")
-(setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
-(setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
-
 ;; enable ido for rinari
 (require 'ido)
 (ido-mode t)
 
 ;; enable rinari
-;; (add-to-list 'load-path "~/.emacs.d/vendor/rinari")
 (require 'rinari)
 (global-rinari-mode)
 
 ;;; rhtml mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
 (require 'rhtml-mode)
 
 ;; enable rspec mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/rspec")
 (require 'rspec-mode)
 
 ;; enable haml mode

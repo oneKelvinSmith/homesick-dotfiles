@@ -16,7 +16,7 @@ alias ec="emacsclient -c -n"
 alias et="emacsclient -t"
 
 ## general aliases
-alias code="cd ~/code"
+alias code="cd ~/Code"
 alias ohmyzsh="et ~/.oh-my-zsh"
 alias zshconfig="et ~/.zshrc"
 alias reload="source ~/.zshrc"
@@ -51,3 +51,6 @@ export TERM=xterm-256color
 export EDITOR=emacs
 # ls colors see ```man ls```
 export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# docker & dvm
+eval "$(dvm env)"

@@ -13,6 +13,13 @@
 ;; disable scroll bars
 (scroll-bar-mode -1)
 
+;; set font
+(set-face-attribute 'default nil
+                    :foundry "apple"
+                    :family "Source_Code_Pro"
+                    :height 120)
+
+
 ;; set cursor to bar
 (setq cursor-type 'bar)
 (setq whitespace-line-column 140)

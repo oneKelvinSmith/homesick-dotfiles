@@ -15,6 +15,7 @@
  '(syslog-ip-face (quote ((t :background unspecified :foreground "#CDC673"))))
  '(syslog-su-face (quote ((t :background unspecified :foreground "#D700D7"))))
  '(syslog-warn-face (quote ((t :background unspecified :foreground "#FF8C00" :weight bold))))
+ '(warning-minimum-level :error)
  '(weechat-color-list (quote (unspecified "#1B1E1C" "#303030" "#5F0000" "#FF1493" "#6B8E23" "#87D700" "#968B26" "#CDC673" "#21889B" "#5FD7FF" "#A41F99" "#D700D7" "#349B8D" "#5FFFFF" "#F5F5F5" "#FFFAFA"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

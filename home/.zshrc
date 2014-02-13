@@ -11,21 +11,22 @@ alias ek="emacsclient -e \(kill-emacs\)"
 # attach to existing client
 alias e="emacsclient -n"
 # open new gui client
-alias ec="emacsclient -c -n"
+alias ec="emacsclient -nc"
 # open new terminal client
 alias et="emacsclient -t"
 
 ## general aliases
 alias code="cd ~/Code"
-alias ohmyzsh="et ~/.oh-my-zsh"
-alias zshconfig="et ~/.zshrc"
+alias ohmyzsh="emacsclient -n ~/.oh-my-zsh"
+alias zshconfig="emacsclient -n ~/.zshrc"
+alias muxconfig="emacsclient -n ~/.tmux.conf"
 alias reload="source ~/.zshrc"
 alias git="hub"
 alias mux="tmuxinator"
 
 plugins=(
-    git ruby rbenv bundler gem rake rails heroku vagrant
-    thor tmux tmuxinator zsh-syntax-highlighting emacs
+    git ruby rbenv bundler gem rake rails heroku vagrant thor
+    tmux tmuxinator middleman zsh-syntax-highlighting emacs
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -46,11 +47,12 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # heroku toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
-# set variables
-export TERM=xterm-256color
-export EDITOR=emacs
+# editor variables
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -n"
+
+# colorful terminal
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
 # ls colors see ```man ls```
 export LSCOLORS=Exfxcxdxbxegedabagacad
-
-# docker & dvm
-eval "$(dvm env)"

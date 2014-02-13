@@ -1,0 +1,47 @@
+[user]
+	name = Kelvin Smith
+	email = ksmith@thoughtworks.com
+[push]
+	default = simple
+[color]
+	ui = true
+[github]
+	user = oneKelvinSmith
+	oauth-token = 6231acdfb8b542bd89b70e7f383e733c088bae7d
+[pull]
+	rebase = true
+[help]
+	autocorrect = 1
+[alias]
+	ds = diff --staged
+	st = status -sb   
+	fup = log --since '1 day ago' --oneline --author ksmith@thoughtworks.com
+	ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
+	lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat
+
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+
+	cp = cherry-pick
+	cl = clone
+	ci = commit
+	co = checkout
+	br = branch 
+	diff = diff --word-diff
+	dc = diff --cached
+
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+
+	l = log 
+	lh = log --graph
+	la = !git lh --date-order --all 2> /dev/null
+	lb = log --graph --simplify-by-decoration
+	lba = !git lb --all 
+	h = !git --no-pager log --graph -n 15
+	a = !git --no-pager la -n 15

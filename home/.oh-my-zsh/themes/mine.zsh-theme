@@ -27,7 +27,7 @@ PROMPT="
 %{$fg[green]%}$(box_name) \
 %{$fg[white]%}in \
 %{$fg[blue]%}${current_dir}%{$reset_color%}\
-${git_info}
+%{$git_info%}
 %{$terminfo[bold]$fg[magenta]%}$ %{$reset_color%}"
 
 # %{$terminfo[bold]$fg[blue]%}${current_dir}%{$reset_color%}\

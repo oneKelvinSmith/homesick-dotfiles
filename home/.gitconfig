@@ -15,7 +15,7 @@
 [alias]
 	ds = diff --staged
 	st = status -sb   
-	fup = log --since '1 day ago' --oneline --author ksmith@thoughtworks.com
+	fup = log --since '1 day ago' --oneline --author oneKelvinSmith@gmail.com
 	ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
 	lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat
 
@@ -45,3 +45,5 @@
 	lba = !git lb --all 
 	h = !git --no-pager log --graph -n 15
 	a = !git --no-pager la -n 15
+[core]
+	editor = emacsclient --alternate-editor \"\" --create-frame \"$@\"

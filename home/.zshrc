@@ -5,31 +5,21 @@ ZSH_THEME="mine"
 ## syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
-## emacs aliases
-alias ed="emacs --daemon"
-alias ek="emacsclient -e \(kill-emacs\)"
-# attach to existing client
-alias e="emacsclient -n"
-# open new gui client
-alias ec="emacsclient -nc"
-# open new terminal client
-alias et="emacsclient -t"
-
 ## general aliases
 alias code="cd ~/Code"
-alias ohmyzsh="emacsclient -n ~/.oh-my-zsh"
-alias zshconfig="emacsclient -n ~/.zshrc"
-alias muxconfig="emacsclient -n ~/.tmux.conf"
+alias ohmyzsh="emacs ~/.oh-my-zsh"
+alias zshconfig="emacs ~/.zshrc"
+alias muxconfig="emacs ~/.tmux.conf"
 alias reload="exec $SHELL -l"
 alias git="hub"
 alias mux="tmuxinator"
 
-plugins=(
-    git ruby rbenv bundler gem rake rails heroku vagrant thor
-    pyenv tmux tmuxinator middleman zsh-syntax-highlighting emacs
-)
+## emacs aliases
+alias ek="emacsclient -e \(kill-emacs\)"
 
-source $ZSH/oh-my-zsh.sh
+# editor variables
+export VISUAL="emacsclient"
+export ALTERNATE_EDITOR="emacs"
 
 # git and hub completions
 fpath=(~/.zsh/completion $fpath)
@@ -47,15 +37,8 @@ if which hub > /dev/null; then eval "$(hub alias -s)"; fi
 # rbenv setup
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
-# pyevn setup
-if which pyenv > /dev/null; then eval "$(pyenv init - --no-rehash)"; fi
-
 # heroku toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
-
-# editor variables
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -nc"
 
 # colorful terminal
 [ -z "$TMUX" ] && export TERM=xterm-256color
@@ -65,3 +48,10 @@ export DISABLE_AUTO_TITLE=true
 
 # ls colors see ```man ls```
 export LSCOLORS=Exfxcxdxbxegedabagacad
+
+plugins=(
+    git ruby rbenv bundler gem rake rails heroku vagrant thor
+    pyenv tmux tmuxinator middleman zsh-syntax-highlighting emacs
+)
+
+source $ZSH/oh-my-zsh.sh

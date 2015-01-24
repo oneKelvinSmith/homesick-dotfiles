@@ -4,12 +4,6 @@
 
 ;;; Code:
 
-(defun in-terminal ()
-  "Return true if in a terminal."
-  (not (display-graphic-p)))
-
-(if (in-terminal) "fantastic" "madness")
-
 ;; disable scroll bars
 (scroll-bar-mode -1)
 
@@ -19,26 +13,19 @@
                     :family "Source_Code_Pro"
                     :height 120)
 
+(require 'ace-window)
 
 ;; set cursor to bar
 (setq cursor-type 'bar)
 (setq whitespace-line-column 140)
 
 ;; set theme to monokai
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/monokai-emacs")
+(add-to-list 'custom-theme-load-path "~/Code/emacs/monokai-emacs")
 (load-theme 'monokai t)
 
 ;; swap prelude keybindings to match the rest of the system
 (setq mac-command-modifier 'super)
 (setq mac-option-modifier 'meta)
-
-;; enable auto-complete mode
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/emacs.d/dict")
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq ac-auto-start nil)
-(ac-set-trigger-key "TAB")
 
 ;; multiple cursors mode
 (require 'multiple-cursors)
@@ -47,5 +34,12 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+;; enable auto-complete mode
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/emacs.d/dict")
+(ac-config-default)
+(global-auto-complete-mode t)
+(setq ac-auto-start )
+(ac-set-trigger-key "TAB")
 (provide 'personal-config)
 ;;; personal-config.el ends here

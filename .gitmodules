@@ -1,6 +1,0 @@
-[submodule "home/.oh-my-zsh/plugins/zsh-syntax-highlighting"]
-	path = home/.oh-my-zsh/plugins/zsh-syntax-highlighting
-	url = git://github.com/oneKelvinSmith/zsh-syntax-highlighting.git
-[submodule "home/.emacs.d/themes/monokai-emacs"]
-	path = home/.emacs.d/themes/monokai-emacs
-	url = git://github.com/oneKelvinSmith/monokai-emacs.git

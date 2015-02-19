@@ -25,7 +25,8 @@ export ALTERNATE_EDITOR="emacs"
 fpath=(~/.zsh/completion $fpath)
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH"
+
 
 # emacs prelude
 export PRELUDE_INSTALL_DIR="$HOME/.emacs.d"
@@ -38,7 +39,11 @@ if which hub > /dev/null; then eval "$(hub alias -s)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # heroku toolbelt
-export PATH=/usr/local/heroku/bin:$PATH
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # colorful terminal
 [ -z "$TMUX" ] && export TERM=xterm-256color

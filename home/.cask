@@ -1,0 +1,39 @@
+#! /bin/sh
+
+apps=(
+  1password
+  adobe-reader
+  alfred
+  bartender
+  dash
+  dropbox
+  evernote
+  firefox
+  flash
+  flux
+  fuze
+  google-chrome
+  intellij-idea
+  iterm2
+  java
+  keepingyouawake
+  libreoffice
+  mailbox
+  rubymine
+  skype
+  spectacle
+  steam
+  sublime-text3
+  textmate
+  vagrant
+  virtualbox
+  vlc
+  xquartz
+)
+
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "installing apps..."
+brew cask install --appdir="/Applications" ${apps[@]}
+# brew cask zap ${apps[@]}

@@ -5,9 +5,6 @@
 	default = simple
 [color]
 	ui = true
-[github]
-	user = oneKelvinSmith
-	oauth-token = 6231acdfb8b542bd89b70e7f383e733c088bae7d
 [pull]
 	rebase = true
 [help]

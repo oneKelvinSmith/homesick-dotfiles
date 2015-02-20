@@ -1,6 +1,7 @@
 ;;; personal.el -- personal configuration file
 
-;;; Commentary:
+;;; Commentary: 
+;;; Intended for use with emacs prelude (http://batsov.com/prelude/)
 
 ;;; Code:
 
@@ -8,37 +9,49 @@
 
 (set-face-attribute 'default nil
                     :foundry "apple"
-                    :family "Source_Code_Pro"
+                    :family "DejaVu Sans Mono"
                     :height 120)
-
-(require 'ace-window)
-
-(setq cursor-type 'bar)
-(setq whitespace-line-column 140)
 
 ;; (add-to-list 'custom-theme-load-path "~/Code/emacs/monokai-emacs")
 ;; (load-theme 'monokai t)
 
-;; (setq mac-command-modifier 'super)
-;; (setq mac-option-modifier 'meta)
+(setq cursor-type 'bar)
+(setq whitespace-line-column 140)
 
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(setq mac-command-modifier 'super)
+(setq mac-option-modifier 'meta)
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/emacs.d/dict")
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq ac-auto-start )
-(ac-set-trigger-key "TAB")
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
 
-; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-; (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-; (remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
+(require 'use-package)
+
+(use-package ag
+  :ensure t)
+
+(use-package dash-at-point
+  :bind (("C-s-h" . dash-at-point))
+    :ensure t)
+
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C-S-c C-S-c" . mc/edit-lines)
+         ("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
+         ("C-c C-<" . mc/mark-all-like-this)))
+
+(use-package robe
+  :ensure t)
+
+(use-package enh-ruby-mode
+  :ensure t
+  :mode ("\\.rb$" . enh-ruby-mode)
+  :interpreter ("ruby" . enh-ruby-mode))
+
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
 
 ; (defadvice ruby-indent-line (after unindent-closing-paren activate)
 ;   "1TBS Closing Parenthesis.

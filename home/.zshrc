@@ -27,7 +27,6 @@ fpath=(~/.zsh/completion $fpath)
 # Customize to your needs...
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH"
 
-
 # emacs prelude
 export PRELUDE_INSTALL_DIR="$HOME/.emacs.d"
 export PRELUDE_URL="https://github.com/oneKelvinSmith/prelude.git"

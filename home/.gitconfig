@@ -44,4 +44,4 @@
 	a = !git --no-pager la -n 15
 [core]
 	# editor = emacsclient --alternate-editor \"\" --create-frame \"$@\"
-  editor = vim
+	editor = "emacsclient --alternate-editor '' --tty"

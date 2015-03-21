@@ -20,6 +20,9 @@ binaries=(
   bash
   brew-cask
   coreutils
+  leiningen
+  elixir
+  erlang
   findutils
   fish
   gcc
@@ -32,11 +35,15 @@ binaries=(
   phantomjs
   postgresql
   python
+  python3
   r
   rbenv
   readline
+  reattach-to-user-namespace
   redis
   ruby-build
+  sbt
+  scala
   sqlite
   the_silver_searcher
   tig

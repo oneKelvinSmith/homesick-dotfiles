@@ -5,22 +5,25 @@ apps=(
   adobe-reader
   alfred
   bartender
-  dash
   dropbox
   evernote
-  firefox
+  firefoxdeveloperedition
   flash
   flux
   fuze
+  gimp
   google-chrome
+  heroku-toolbelt
   intellij-idea
   iterm2
   java
   keepingyouawake
   libreoffice
   mailbox
+  rstudio
   rubymine
   skype
+  slack
   spectacle
   steam
   sublime-text3
@@ -31,6 +34,17 @@ apps=(
   xquartz
 )
 
+excluded_apps=(
+  # need to maintain a specific version
+  firefox
+)
+
+mac_store_apps=(
+  evernote
+  wunderlist
+  dash
+  pocket
+)
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications

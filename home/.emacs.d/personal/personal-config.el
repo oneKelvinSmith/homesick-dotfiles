@@ -1,6 +1,6 @@
 ;;; personal.el -- personal configuration file
 
-;;; Commentary: 
+;;; Commentary:
 ;;; Intended for use with emacs prelude (http://batsov.com/prelude/)
 
 ;;; Code:
@@ -12,10 +12,11 @@
                     :family "DejaVu Sans Mono"
                     :height 120)
 
-;; (add-to-list 'custom-theme-load-path "~/Code/emacs/monokai-emacs")
-;; (load-theme 'monokai t)
+(add-to-list 'custom-theme-load-path "~/Code/monokai-emacs")
+(load-theme 'monokai t)
 
 (setq cursor-type 'bar)
+(setq tab-width 2)
 (setq whitespace-line-column 140)
 
 (setq mac-command-modifier 'super)
@@ -32,7 +33,7 @@
   :ensure t)
 
 (use-package dash-at-point
-  :bind (("C-s-h" . dash-at-point))
+  :bind (("s-C-h" . dash-at-point))
     :ensure t)
 
 (use-package multiple-cursors

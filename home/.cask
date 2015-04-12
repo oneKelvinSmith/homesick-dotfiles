@@ -1,12 +1,11 @@
-#! /bin/sh
+#! /bin/sh -x
 
 apps=(
   1password
-  adobe-reader
   alfred
+  atom
   bartender
   dropbox
-  evernote
   firefoxdeveloperedition
   flash
   flux
@@ -18,16 +17,12 @@ apps=(
   iterm2
   java
   keepingyouawake
-  libreoffice
   mailbox
-  rstudio
   rubymine
   skype
   slack
   spectacle
   steam
-  sublime-text3
-  textmate
   vagrant
   virtualbox
   vlc
@@ -35,8 +30,11 @@ apps=(
 )
 
 excluded_apps=(
-  # need to maintain a specific version
   firefox
+  libreoffice
+  adobe-reader
+  textmate
+  sublime-text3
 )
 
 mac_store_apps=(

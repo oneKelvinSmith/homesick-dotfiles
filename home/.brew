@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/sh -x
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -29,6 +29,7 @@ binaries=(
   git
   gnutls
   hub
+  htop
   imagemagick
   node
   parallel
@@ -50,6 +51,8 @@ binaries=(
   tmux
   tree
   vim
+  watch
+  wemux
   wget
   zsh
 )

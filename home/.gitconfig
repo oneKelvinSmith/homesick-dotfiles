@@ -45,3 +45,5 @@
 [core]
 	# editor = emacsclient --alternate-editor \"\" --create-frame \"$@\"
 	editor = "emacsclient --alternate-editor '' --tty"
+[credential]
+	helper = osxkeychain

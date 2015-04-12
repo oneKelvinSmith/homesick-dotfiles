@@ -4,6 +4,6 @@
 [submodule "home/.oh-my-zsh"]
 	path = home/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "home/.emacs.d"]
-	path = home/.emacs.d
+[submodule "home/.prelude"]
+	path = home/.prelude
 	url = https://github.com/bbatsov/prelude.git
